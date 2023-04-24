@@ -1,0 +1,70 @@
+.box {
+  width: 1280px;
+  height: 600px;
+  border: 1px solid black;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+
+  .in-box {
+    width: 500px;
+    height: 100%;
+  }
+}
+
+.tabs-nav-wrap {
+  width: 100%;
+  position: relative;
+
+  .tab-list {
+    &.active {
+      button {
+        font-size: 14px;
+        color: royalblue;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &.full {
+    .tabs-nav {
+      border-bottom: 1px solid gray;
+    }
+  }
+
+  &.round {
+    .tabs-nav {
+      button {
+        border: 1px solid black;
+        border-radius: 20px;
+        height: 20px;
+      }
+    }
+
+    .nav-bar {
+      display: none;
+    }
+  }
+
+  .tabs-nav {
+    display: flex;
+    width: max-content;
+
+    button {
+      border: none;
+      background: transparent;
+      padding: 0px 40px;
+      height: 60px;
+      min-width: 120px;
+    }
+  }
+  .nav-bar {
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background-color: black;
+    left: calc(var(--bar) * 120px);
+    transition: width 0.3s, left 0.3s, right 0.3s;
+  }
+}
